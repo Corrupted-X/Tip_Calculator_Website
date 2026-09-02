@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>JavaScript Tip Calculator</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="tip-cal.css">
+	<script src="tip-cal.js" async></script>
+</head>
+<body>
+	<noscript>
+		<p>Sorry, JavaScript is required for this page to work.
+	</noscript>
+	
+	<div class="centergrey">
+		<h1>JavaScript Tip Calculator</h1>
+		
+		<form name="tipform">
+			<label for="cost">Total Cost</label>
+			<input type="text" id="cost" maxlength="7" required>
+			
+			<label for="quality">Service Quality</label>
+			<div class="gridradio">
+				<input type="radio" name="quality">Poor<br>
+				<input type="radio" id="quality" name="quality" checked>Ok<br>	<!-- Connected to label -->
+				<input type="radio" name="quality">Super
+			</div>
+			
+			<label for="amount">Tip at least: </label>
+			<input type="text" id="amount" disabled> <!-- Makes it read only with disabled -->
+			
+			<p>&nbsp;</p>	
+			<div class="gridright">
+				<button type="button" onClick="compute();">Calculate Tip</button>
+				<button type="reset">Clear</button>
+			</div>
+		</form>
+	</div>		<!-- End of Calculator -->
